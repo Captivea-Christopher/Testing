@@ -11,7 +11,7 @@
     'website': "https://www.Captivea.us/",
     'category': 'Website',
     'version': '0.1',
-    'depends': ['base','website','blog'],
+    'depends': ['base','website','blogs'],
     'data': [
         'views/blogpost.xml',
         'views/views.xml',
