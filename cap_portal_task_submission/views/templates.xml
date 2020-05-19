@@ -77,7 +77,7 @@
          <template id="portal_task_button_extention" inherit_id="portal.portal_my_home" name="Portal Task Button Extention">
             <xpath expr='//div[@id="oe_structure_portal_my_home_2"]' position="after">
                 <!--<t t-if="{{1==1}}">-->
-                    <div>hi</div>
+                    <a href="/my/submit_form" class="btn btn-danger">Submit Task</a>
                 <!--</t>-->
             </xpath>
          </template>
