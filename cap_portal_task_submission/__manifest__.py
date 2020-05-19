@@ -27,5 +27,6 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/templates.xml',
+        'data/website_form_project_data.xml',
     ]
 }
