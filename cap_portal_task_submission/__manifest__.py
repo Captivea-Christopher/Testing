@@ -21,7 +21,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','website','project','contacts'],
+    'depends': ['base','website','project','contacts', 'form_builder'],
 
     # always loaded
     'data': [
