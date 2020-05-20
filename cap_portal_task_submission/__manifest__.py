@@ -23,5 +23,6 @@
     # always loaded
     'data': [
         'views/templates.xml',
+        'data/data.xml',
     ]
 }

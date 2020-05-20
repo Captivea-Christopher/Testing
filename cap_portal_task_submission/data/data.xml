@@ -1,0 +1,6 @@
+<function model="ir.model.fields" name="formbuilder_whitelist">
+            <value>project.task</value>
+            <value eval="[
+                'name', 'project_id', 'email_from', 'description',
+            ]"/>
+        </function>
