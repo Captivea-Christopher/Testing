@@ -1,6 +1,12 @@
-<function model="ir.model.fields" name="formbuilder_whitelist">
+<odoo>
+		<record id="base.model_project_task" model="project.task">
+			<field name="website_form_access">True</field>
+			<field name="website_form_label">Tasks</field>
+		</record>
+		<function model="ir.model.fields" name="formbuilder_whitelist">
             <value>project.task</value>
             <value eval="[
                 'name', 'project_id', 'email_from', 'description',
             ]"/>
         </function>
+</odoo>
