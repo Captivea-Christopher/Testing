@@ -9,6 +9,8 @@ class portal_task_submission(http.Controller):
 		list_of_projects_owned_by_customer = request.env['project.project'].sudo().search([
 			('partner_id', '=', partner_id)
 		])
+		projects_exist = list_of_projects_owned_by_customer.exists()
 		return http.request.render('cap_portal_task_submission.portal_task_submission', {
 			'list_of_projects_owned_by_customer': list_of_projects_owned_by_customer,
+			'projects_exist' : projects_exist
 			})
