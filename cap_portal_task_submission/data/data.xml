@@ -1,6 +1,6 @@
 <odoo>
 		<record id="project.model_project_task" model="project.task">
-			<field name="website_form_access">True</field>
+			<field name="website_form_access" eval="True"/>
 			<field name="website_form_label">Tasks</field>
 		</record>
 		<function model="ir.model.fields" name="formbuilder_whitelist">
