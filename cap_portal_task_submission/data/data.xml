@@ -1,5 +1,5 @@
 <odoo>
-		<record id="base.model_project_task" model="project.task">
+		<record id="project.model_project_task" model="project.task">
 			<field name="website_form_access">True</field>
 			<field name="website_form_label">Tasks</field>
 		</record>
