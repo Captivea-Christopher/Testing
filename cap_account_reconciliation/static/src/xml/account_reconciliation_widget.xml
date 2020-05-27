@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- ACCOUNT MOVE LINE PROPOSITION FROM RECONCILIATION VIEW -->
+    <t t-extend="reconciliation.line.mv_line">
+        <!-- SIMPLIFY LABEL COLUMN -->
+        <t t-jquery=".cell_label" t-operation="replace">
+            <td class="cell_label">
+                <!--<t t-if="line.partner_id &amp;&amp; line.partner_id !== state.st_line.partner_id">-->
+                    <!--<t t-if="line.partner_name.length">-->
+                        <!--<t t-esc="line.partner_name"/>:-->
+                    <!--</t>-->
+                <!--</t>-->
+                <!--<t t-esc="line.label || line.name"/>-->
+                <!--<t t-if="line.ref &amp;&amp; line.ref.length"> : </t>-->
+                <t t-esc="line.ref"/>
+            </td>
+        </t>
+    </t>
+
+</templates>
