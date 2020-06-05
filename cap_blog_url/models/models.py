@@ -3,7 +3,7 @@
 from odoo import models, fields, api
 from odoo.addons.http_routing.models.ir_http import slug
 
-class my_module(models.Model):
+class BlogPost(models.Model):
     _inherit = 'blog.post'
 
     custom_url = fields.Text()    #no uppercase, gets changed by the system
