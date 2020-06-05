@@ -1,0 +1,76 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    ADDING TO A FORM THAT EXISTS/APPENDING XML
+    
+    <record id="model_Viewtype_ModuleFunction_(inherit)" model="ir.ui.view">   Model here is referencing the form view you're adding fields to. **NOT** the model being modified
+                                                                               id is the "View Name" that shows up in Settings->Technical->Views
+                                                                               
+      <field name="name">model.Viewtype.ModuleFunction.(inherit)</field>       This and the ID above should be the same, except this will use .'s
+                                                                               Example: res.partner.form.biography.inherit -> (res.partner).(form).(biography).(inherit)
+                                                                               This will be the rear portion of the External ID
+                                                                               External ID = Module."name"        ie. Example cap_blog_biography.res_partner_form_biography_inherit
+                                                                               
+      <field name="model">model.name</field>                                   The model you will be affecting. If it already existent you need to add this next line:
+      
+      <field name="inherit_id" ref="module.view"/>                             If inheriting use the external id of the form used      !!Not always used!!!
+                                                                               Example: base.view_partner_form (Can be found via Dev-Bug -> Edit View:Form)
+                                                                               
+      <field name="arch" type="xml">                                           Arch defines the body of a view. I dont have a great understanding of it, but it is Odoo Specific
+                                                                               More Info: https://www.odoo.com/documentation/13.0/reference/views.html#view-types
+      
+        <field name="field" position="before/after">                           Fields can be found defined by activating developer mode and hovering over a label.
+                                                                               Example: on contacts the label "Tax ID" has the field value of "Vat"
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>v 
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="my_module.action_window">
+      <field name="name">my_module window</field>
+      <field name="res_model">my_module.my_module</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="my_module.action_server">
+      <field name="name">my_module server</field>
+      <field name="model_id" ref="model_my_module_my_module"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="my_module" id="my_module.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="my_module.menu_1" parent="my_module.menu_root"/>
+    <menuitem name="Menu 2" id="my_module.menu_2" parent="my_module.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="my_module.menu_1_list" parent="my_module.menu_1"
+              action="my_module.action_window"/>
+    <menuitem name="Server to list" id="my_module" parent="my_module.menu_2"
+              action="my_module.action_server"/>
+    -->
+  </data>
+</odoo>
