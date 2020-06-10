@@ -10,10 +10,10 @@ class portal_task_submission(http.Controller):
         '|',
             '&',
                 ('project_id.privacy_visibility', '=', 'portal'),
-                ('project_id.message_partner_ids', 'child_of', [request.user.partner_id.commercial_partner_id.id]),
+                ('project_id.message_partner_ids', 'child_of', [request.env.user.partner_id.commercial_partner_id.id]),
             '&',
                 ('project_id.privacy_visibility', '=', 'portal'),
-                ('message_partner_ids', 'child_of', [request.user.partner_id.commercial_partner_id.id]),
+                ('message_partner_ids', 'child_of', [request.env.user.partner_id.commercial_partner_id.id]),
         ])
 		projects_exist = list_of_projects_owned_by_customer.exists()
 		return http.request.render('cap_portal_task_submission.portal_task_submission', {
