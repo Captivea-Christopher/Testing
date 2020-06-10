@@ -6,7 +6,7 @@ from odoo.addons.http_routing.models.ir_http import slug
 class BlogPost(models.Model):
 	_inherit = 'blog.post'
 	
-	custom_url = fields.Text(default = record.name)      #no uppercase, gets changed by the system
+	custom_url = fields.Text(default = lambda self: self.name)      #no uppercase, gets changed by the system
 	_sql_constraints = [('custom_url_unique', 'unique(custom_url)', 'There cannot be duplicate custom URLs')]
 	
 	@api.multi
