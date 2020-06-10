@@ -1,0 +1,12 @@
+<odoo>
+		<record id="project.model_project_task" model="ir.model">
+			<field name="website_form_access" eval="True"/>
+			<field name="website_form_label">Create a Task</field>
+		</record>
+		<function model="ir.model.fields" name="formbuilder_whitelist">
+            <value>project.task</value>
+            <value eval="[
+                'name', 'project_id', 'email_from', 'description',
+            ]"/>
+        </function>
+</odoo>

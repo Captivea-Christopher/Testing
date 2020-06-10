@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<template id="blog_post_author_biography" inherit_id="website_blog.blog_post_complete" name="Blog Biography">  <!-- its like record. But different, Find inherit ID on webpage HTML editor -->
+		<xpath expr='//*[@id="blog_content"]' position="after">
+			<div style="margin:0;background-color:#393939;color:#ececec">
+				<div style="margin-left:20%;margin-right:20%;padding-top:30px;padding-bottom:30px">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-3" align="center">
+								<span t-field="blog_post.author_id.image" class="o_not_editable" t-options='{"widget": "image", "class":"rounded-circle", "style":"width : 100px, margin-right: 10px"}'/>
+							</div>
+							<div class="col-sm-9" align="center">
+								<h4 style="color:white">
+									By
+									<span id="blog_author" t-field="blog_post.author_id.name"/>
+									<div>On
+										<span id="blog_publish_date" t-field="blog_post.published_date" t-options='{"widget":"date"}'/>
+									</div>
+								</h4>
+								<div>
+									<span id="blog_author_biography" t-field="blog_post.author_id.biography"/>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</xpath>
+	</template>
+</odoo>
