@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+         <template id="portal_task_submission" name="Portal Task Submission"> 
+            <t t-call="website.layout">
+                <div class="container">
+                    <form action="/website_form/" method="post" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-model_name="project.task" data-success_page="Https://www.Captivea.us/my/account">
+                      <div class="container">
+                        
+                        <div class="row form-group form-field">
+                          <div class="col-md-4 text-md-right col-lg-2">
+                            <label class="col-form-label" for="project_id">
+                                  Project
+                              </label>
+                          </div>
+                          <div class="col-md-8">
+                            <select class="form-control o_website_form_input" name="project_id" required="true">
+                                <t t-foreach="list_of_projects_owned_by_customer" t-as="customer_project">
+                                    <option t-attf-value="{{customer_project.id}}">
+                                        <t t-esc="customer_project.name"/>
+                                        </option>
+                                </t>
+                            </select>
+                          </div>
+                        </div>
+                        
+                        
+                        <div class="row form-group form-field o_website_form_required">
+                          <div class="col-md-4 text-md-right col-lg-2">
+                            <label class="col-form-label" for="name">
+                                                  Title
+                                              </label>
+                          </div>
+                          <div class="col-md-8 col-lg-8">
+                            <input type="text" class="form-control o_website_form_input" name="name" required="true"/>
+                          </div>
+                        </div>
+                        
+                        
+                        <div class="row form-group form-field o_website_form_field_hidden">
+                          <div class="col-md-4 text-md-right col-lg-2 pb0">
+                            <label class="col-form-label" for="email_from">
+                                                  Email
+                                              </label>
+                          </div>
+                          <div class="col-md-8 col-lg-8 offset-lg-2">
+                            <input type="text" class="form-control o_website_form_input" name="email_from" t-attf-value="{{request.env.user.email}}"/>
+                          </div>
+                        </div>
+                        
+                        
+                        <div class="row form-group form-field">
+                          <div class="col-md-4 text-md-right col-lg-2">
+                            <label class="col-form-label" for="description">
+                                                  Description
+                                              </label>
+                          </div>
+                          <div class="col-md-8">
+                            <textarea class="form-control o_website_form_input" name="description"/>
+                          </div>
+                        </div>
+                        
+                        
+                        <div class="form-group row">
+                          <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                            <button class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text" data-original-title="" title="" aria-describedby="tooltip362410">Send</button>
+                            <span id="o_website_form_result" class="text-danger ml8"/>
+                          </div>
+                        </div>
+                        
+                        
+                      </div>
+                    </form>
+                </div>
+            </t>
+         </template>
+         
+         <template id="portal_task_button_extention" inherit_id="portal.portal_my_home" name="Portal Task Button Extention">
+            <xpath expr='//div[@id="oe_structure_portal_my_home_2"]' position="after">
+                <!--<t t-if="{{1==1}}">-->
+                    <div>hi</div>
+                <!--</t>-->
+            </xpath>
+         </template>
+         
+    </data>
+</odoo>
+
+    

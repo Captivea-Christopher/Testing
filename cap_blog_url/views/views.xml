@@ -1,5 +1,14 @@
 <odoo>
   <data>
-    
+    <record id="blog_post_form_custom_url_inherit" model="blog.post">  <!--model here is of what you're adding to:  ID = name w/ underscores-->
+      <field name="name">blog.post.form.custom_url.inherit</field>    <!--This is roughly.  Model + Viewtype + ModuleFunction   inherit as needed-->
+      <field name="model">blog.post</field>                            <!--Model being added/modified -->
+      <field name="inherit_id" ref="website_blog.view_blog_post_form"/>          <!--If inheriting use the external id of the form used--> <!--!!!Not always used!!!-->
+      <field name="arch" type="xml">
+        <field name="tags_ids" position="after">               
+          <field name="custom_url" string="Custom Url" modifiers="{}"/>   <!-- name is the field identifier, string is the visable text on the form, modifiers as needed -->
+        </field>
+      </field>
+    </record>
   </data>
 </odoo>
