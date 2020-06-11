@@ -6,7 +6,7 @@
       <field name="inherit_id" ref="base.view_partner_form"/>          <!--If inheriting use the external id of the form used--> <!--!!!Not always used!!!-->
       <field name="arch" type="xml">
         <field name="vat" position="after">               
-          <field name="biography" string="Biography" attrs="{'invisible': [('parent_id','!=', 1), ('parent_id','!=', 14)]}"/>   <!-- name is the field identifier, string is the visable text on the form, modifiers as needed -->
+          <field name="biography" string="Biography" attrs="{'invisible': [('parent_id','!=', 1), ('parent_id','!=', 102)]}"/>   <!-- name is the field identifier, string is the visable text on the form, modifiers as needed -->
         </field>
       </field>
     </record>
