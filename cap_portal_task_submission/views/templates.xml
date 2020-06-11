@@ -83,10 +83,10 @@
          
          <template id="portal_task_button_extention" inherit_id="portal.portal_my_home" name="Portal Task Button Extention">
             <xpath expr='//div[@id="oe_structure_portal_my_home_2"]' position="after">
-                    <br></br>
-                        <t t-if="request.env['project.project'].sudo().search([('partner_id', '=', request.env.user.partner_id.parent_id.id)]).exists()">
-                            <a href="/my/submit_task" class="btn btn-danger">Create new task</a>
-                        </t>
+                <br></br>
+                    <t t-if="request.env['project.project'].sudo().search([('partner_id', '=', request.env.user.partner_id.parent_id.id)]).exists()">
+                        <a href="/my/submit_task" class="btn btn-danger">Create new task</a>
+                    </t>
             </xpath>
          </template>
          
