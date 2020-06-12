@@ -77,7 +77,7 @@
                     </t>
                     <t t-else="">
                         <h2>Error</h2>
-                        <p>I'm sorry but you don't seem to be the customer on any projects.</p>
+                        <p>There does not seem to be any project assigned to your company. Please contact your project manager if you think this is an error.</p>
                         <a href="/my/home" class="btn btn-danger">Click here to return home</a>
                     </t>
                     
