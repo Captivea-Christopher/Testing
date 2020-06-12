@@ -75,9 +75,6 @@
                           </div>
                         </form>
                     </t>
-                    
-                    <!-- Error page in case a client finds their way to the page accidentally-->
-                    
                     <t t-else="">
                         <h2>Error</h2>
                         <p>I'm sorry but you don't seem to be the customer on any projects.</p>
