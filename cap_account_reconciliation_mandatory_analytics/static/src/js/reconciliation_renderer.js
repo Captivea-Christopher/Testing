@@ -1,4 +1,4 @@
-odoo.define('cap_account_reconciliation.ReconciliationRenderer', function (require) {
+odoo.define('cap_account_reconciliation_mandatory_analytics.ReconciliationRenderer', function (require) {
     "use strict";
 
     var ReconciliationRenderer = require("account.ReconciliationRenderer");
