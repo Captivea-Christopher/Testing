@@ -8,6 +8,5 @@
     'summary': "Manage the 'account' reconciliation view.",
     'depends': ["account"],
     'data': ["views/assets_backend.xml"],
-    'qweb': ["static/src/xml/account_reconciliation_widget.xml"],
     'installable': True
 }
