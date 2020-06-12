@@ -4,8 +4,8 @@
 {
     'name': "cap_account_reconciliation",
     'version': "12.0",
-    'author': "captivea-jpa",
-    'summary': "Manage the 'account' reconciliation view.",
+    'author': "Captivea LLC",
+    'summary': "Make analytic account mandantory on reconciliation screen",
     'depends': ["account"],
     'data': ["views/assets_backend.xml"],
     'installable': True
