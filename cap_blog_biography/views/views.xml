@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+    <record id="res_partner_form_biograpy_inherit" model="ir.ui.view">  <!--model here is of what you're adding to:  ID = name w/ underscores-->
+      <field name="name">res.partner.form.biography.inherit</field>    <!--This is roughly.  Model + Viewtype + ModuleFunction   inherit as needed-->
+      <field name="model">res.partner</field>                            <!--Model being added/modified -->
+      <field name="inherit_id" ref="base.view_partner_form"/>          <!--If inheriting use the external id of the form used--> <!--!!!Not always used!!!-->
+      <field name="arch" type="xml">
+        <field name="vat" position="after">               
+          <field name="biography" string="Biography" attrs="{'invisible': [('parent_id','!=', 1)]}"/>   <!-- name is the field identifier, string is the visable text on the form, modifiers as needed -->
+        </field>
+      </field>
+    </record>
+  </data>
+</odoo>
