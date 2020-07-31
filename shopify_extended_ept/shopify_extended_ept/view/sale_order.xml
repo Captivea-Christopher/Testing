@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="shopify_sale_order_delivery_inherited_form_view" model="ir.ui.view">
+            <field name="name">Inherite.View.sale.order.delivery.Instance.form.view</field>
+            <field name="model">sale.order</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="delivery.view_order_form_with_carrier"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_right']" position="inside">
+                    <field name="promotion_code"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="shopify_sale_order_inherited_form_view_ept" model="ir.ui.view">
+            <field name="name">Inherite.View.sale.order.Instance.form.view</field>
+            <field name="model">sale.order</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//field[@name='shopify_instance_id']" position="after">
+                    <field name="browser_ip" readonly="1"/>
+                    <field name="credit_card_number" readonly="1"/>
+                </xpath>
+
+		<xpath expr="//button[@name='action_view_delivery']" position="before">
+                    <button name="open_shopify_orders" string="Open Order"
+                            class="oe_stat_button" icon="fa-spotify" type="object"
+                            attrs="{'invisible':[('shopify_order_id','=', False)]}"/>
+                </xpath>	
+   	    </field>
+        </record>
+
+        <!-- <record id="credit_card_sale_form_inherit_id" model="ir.ui.view">
+            <field name="name">credit_card.sale.order.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="view_id" ref="shopify_ept.view_order_tree_shopify_ept"></field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <data>
+                   <field name="product_id" position="after">
+                    	<field name="credit_card_number" filter_domain="[('credit_card_number','ilike',self)]" readonly="1"/>
+                    </field>
+                </data>
+            </field>
+        </record> -->
+</odoo>

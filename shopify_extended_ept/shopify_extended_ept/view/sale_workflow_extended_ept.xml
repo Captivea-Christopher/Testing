@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="inherited_view_sale_workflow_process" model="ir.ui.view">
+			<field name="name">Inherite form view of sale workflow process </field>
+			<field name="model">sale.workflow.process.ept</field>
+			<field name="type">form</field>
+			<field name="inherit_id"
+				ref="auto_invoice_workflow_ept.sale_workflow_process_view_form" />
+			<field name="arch" type="xml">
+				<field name="register_payment" position="after">
+					<!--<field name="create_credit_note"/>-->
+					<!--<field name="validate_credit_note"/>
+					<field name="register_payment_in_credit"/>-->
+				</field>
+			</field>
+		</record>
+	</data>
+</odoo>

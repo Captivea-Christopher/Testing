@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_shopify_salesperson_instance_ept,shopify_salesperson_instance_ept,model_shopify_salesperson_instance_ept,base.group_erp_manager,1,0,0,0
+access_shopify_salesperson_instance_ept_manager,shopify_salesperson_instance_ept,model_shopify_salesperson_instance_ept,base.group_system,1,1,1,1
+access_shopify_customer_details_ept,access_shopify_customer_details_ept,model_shopify_customer_details_ept,,1,1,1,1
